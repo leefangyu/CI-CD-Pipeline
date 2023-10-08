@@ -1,0 +1,12 @@
+前端:
+sudo docker build . -t frontend_release
+sudo docker save -o frontend_release.tar frontend_release
+sudo docker images
+sudo docker run --net=host frontend_release
+
+
+後端:
+sudo docker build . -t backend_release
+sudo docker save -o backend_release.tar backend_release
+sudo docker images
+sudo docker run --net=host backend_release
